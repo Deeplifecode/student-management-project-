@@ -14,7 +14,7 @@
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
 }
 
 .logout {
@@ -141,3 +141,5 @@ ul li a:hover {
         font-size: 1rem;
     }
 }
+/* for add_student.php css */
+
