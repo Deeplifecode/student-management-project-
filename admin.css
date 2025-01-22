@@ -1,54 +1,60 @@
-
-*{
+* {
     margin: 0px;
-    padding: 0px    ;
+    padding: 0px;
+    box-sizing: border-box;
 }
 
-.header{
+.header {
     background-color: skyblue;
     line-height: 80px;
-    padding-left: 30px;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-a{
+
+a {
     text-decoration: none;
 }
-.logout{
-    float: right;
+
+.logout {
     padding-right: 30px;
 }
-ul{
+
+ul {
     background-color: rgba(0, 0, 0, 0.669);
     width: 15%;
     height: 100%;
     position: fixed;
     padding-top: 5%;
     text-align: center;
+    transition: all 0.3s ease;
 }
-ul li{
+
+ul li {
     list-style: none;
     padding-bottom: 30px;
     font-size: 18px;
 }
-ul li a{
+
+ul li a {
     color: white;
-    font-weight: bold ;
+    font-weight: bold;
 }
-ul li a:hover{
+
+ul li a:hover {
     color: skyblue;
     text-decoration: none !important;
 }
-.content{
+
+.content {
     margin-left: 20%;
     margin-top: 5%;
-       
-}
-/* Main Content Area */
-.content {
-    margin-left: 270px; /* Make space for the sidebar */
     padding: 40px;
-   background-color: #f9f9f989; 
+    background-color: #f9f9f989;
     height: 100%;
     width: 70%;
+    transition: all 0.3s ease;
 }
 
 .content h2 {
@@ -75,4 +81,63 @@ ul li a:hover{
 .search-bar input:focus {
     outline: none;
     border-color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    ul {
+        width: 100%;
+        height: auto;
+        position: static;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0;
+    }
+
+    ul li {
+        padding-bottom: 0;
+        font-size: 16px;
+    }
+
+    .content {
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+        padding: 20px;
+    }
+
+    .content h2 {
+        font-size: 2rem;
+    }
+
+    .intro-text {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    ul {
+        flex-wrap: wrap;
+    }
+
+    ul li {
+        padding: 10px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+
+    .content h2 {
+        font-size: 1.8rem;
+    }
+
+    .search-bar input {
+        font-size: 1rem;
+    }
 }
