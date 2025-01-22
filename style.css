@@ -1,0 +1,298 @@
+/* Reset margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    background-color: skyblue;
+    height: 70px;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 25px;
+    position: relative;
+    left: 5%;
+    color: white;
+    font-weight: bold;
+    line-height: 70px;
+}
+
+ul {
+    position: relative;
+    float: right;
+    margin-right: 20px;
+}
+
+ul li {
+    display: inline-block;
+    line-height: 70px;
+    margin: 0 5px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 17px;
+}
+
+/* Hero Section (Section1) */
+.section1 {
+    padding-top: 20px;
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Full screen minus some space */
+    background: url('img/campus\ 5.jpg') center/cover no-repeat; /* Add your background image here */
+    background-attachment: fixed; /* Parallax effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+/* Dark overlay to improve text visibility */
+.section1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: -1; /* Ensure overlay is behind the text */
+}
+
+/* Text inside Section1 */
+.img_text {
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    color: white;
+    background-color: midnightblue;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 35px;
+}
+
+
+.hero-content h1 {
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content .btn {
+    font-size: 18px;
+    padding: 15px 30px;
+    background-color: #1d72b8;
+    border: none;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background-color: #155a8a;
+}
+
+/* Main Image */
+.main_img {
+    height: 400px;
+    width: 100%;
+}
+
+.welcome_img {
+    width: 100%;
+    height: 250px;
+}
+
+/* Form Container Styling */
+.admission_form {
+    background-color: rgba(0, 0, 0, 0.5);  /* Dark overlay */
+    border-radius: 10px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    margin: 30px auto;
+    color: white;  
+    position: relative; /* Necessary for the overlay */
+    min-height: 400px; /* Set a minimum height */
+}
+
+/* Dark Fade Overlay */
+.admission_form::before {
+    background-image: url('img/Gra dig.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;    
+    z-index: -1; /* Adjusted z-index */
+}
+
+/* Label Styling */
+.label_text {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    padding-right: 15px;
+    color: white;  /* White label text */
+    font-weight: bold;
+}
+
+/* Input Field Styling */
+.input_deg, .input_txt {
+    width: 100%;  /* Full width for better alignment */
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid #fff;  /* White border */
+    background-color: rgba(255, 255, 255, 0.8);  /* Slightly transparent white for inputs */
+    color: #333;  /* Dark text color inside inputs */
+    margin-bottom: 20px;
+    padding:  0 0 0 15px;  /* Padding for text inside inputs */
+}
+
+/* Input Focus Effect */
+.input_deg:focus, .input_txt:focus {
+    border: 2px solid #1d72b8;  /* Blue border on focus */
+    outline: none;
+    box-shadow: 0 0 8px rgba(29, 114, 184, 0.8);  /* Glow effect on focus */
+}
+
+/* Submit Button Styling */
+#submit {
+    width: 100%;  /* Full width button */
+    padding: 15px;
+    background-color: #1d72b8;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Submit Button Hover Effect */
+#submit:hover {
+    background-color: #155a8a;  /* Darker blue on hover */
+}
+
+/* Make form responsive for smaller screens */
+@media (max-width: 768px) {
+    .admission_form {
+        width: 80%;
+    }
+
+    .input_deg, .input_txt {
+        width: 100%;
+    }
+
+    #submit {
+        width: 100%;
+    }
+}
+
+
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.662);
+    height: 70px;
+    width: 100%;
+    font-size: 10px;
+}
+
+.footer_deg {
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+}
+
+/* Courses Section */
+.courses-container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.course-card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-bottom: 30px;
+}
+
+.course-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.course-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-bottom: 4px solid #1d72b8;
+}
+
+.course-info {
+    padding: 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.course-info h3 {
+    color: #333;
+    font-size: 22px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.course-info p {
+    color: #555;
+    font-size: 16px;
+}
+
+.course-card:hover .course-info {
+    background-color: #1d72b8;
+    color: white;
+}
+
+.course-card:hover .course-info h3 {
+    color: #fff;
+}
+
+.course-card:hover .course-info p {
+    color: #fff;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .course-card {
+        margin-bottom: 20px;
+    }
+
+    .course-img {
+        height: 180px;
+    }
+}
